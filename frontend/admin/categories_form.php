@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Categories</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../../backend/js/confirmDelete.js"></script>
 </head>
 <body>
     <h1>Categories</h1>
-    <a href="add_category.php">Add Category</a>
+    <a href="add.php?type=categories">Add Category</a>
     <table>
         <thead>
             <tr>
@@ -22,8 +23,8 @@
                     <td><?= htmlspecialchars($category['id']) ?></td>
                     <td><?= htmlspecialchars($category['name']) ?></td>
                     <td>
-                        <a href="edit_category.php?id=<?= htmlspecialchars($category['id']) ?>">Edit</a>
-                        <a href="delete_category.php?id=<?= htmlspecialchars($category['id']) ?>">Delete</a>
+                        <a href="edit.php?type=categories&id=<?= htmlspecialchars($category['id']) ?>">Edit</a>
+                        <a href="#" onclick="confirmDelete('delete.php?type=categories&id=<?= htmlspecialchars($category['id']) ?>')">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

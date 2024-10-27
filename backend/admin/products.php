@@ -10,7 +10,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
     }
 }
 
-$statement = $pdo->query("SELECT products.id, products.name, description, price, categories.name AS category_name FROM products JOIN categories ON category_id = categories.id");
+$statement = $pdo->query("SELECT products.id, products.name, description, price, categories.name AS category_name FROM products JOIN categories ON category_id = categories.id ORDER BY products.id");
 $products = $statement->fetchAll();
 include '../../frontend/admin/products_form.php';
 ?>

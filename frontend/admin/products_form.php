@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Products</title>
     <link rel="stylesheet" href="../../frontend/css/style.css">
+    <script src="../../backend/js/confirmDelete.js"></script>
 </head>
 <body>
     <h1>Products</h1>
-    <a href="add_product.php">Add Product</a>
+    <a href="add.php?type=products">Add Product</a>
     <table>
         <thead>
             <tr>
@@ -28,8 +29,8 @@
                     <td><?= $product['description'] ?></td>
                     <td><?= $product['category_name'] ?></td>
                     <td>
-                        <a href="edit_product.php?id=<?= $product['id'] ?>">Edit</a>
-                        <a href="delete_product.php?id=<?= $product['id'] ?>">Delete</a>
+                        <a href="edit.php?type=products&id=<?= $product['id'] ?>">Edit</a>
+                        <a href="#" onclick="confirmDelete('delete.php?type=products&id=<?= $product['id'] ?>')">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

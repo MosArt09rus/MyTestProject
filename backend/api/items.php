@@ -9,6 +9,7 @@ try {
 
     $nameFilter = isset($_GET['name']) ? $_GET['name'] : '';
 
+
     $sql = "SELECT products.id, products.name, products.description AS preview_text, products.price, categories.name AS category
             FROM products
             JOIN categories ON products.category_id = categories.id

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Users</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../../backend/js/confirmDelete.js"></script>
 </head>
 <body>
     <h1>Users</h1>
-    <a href="add_user.php">Add User</a>
+    <a href="add.php?type=users">Add User</a>
     <table>
         <thead>
             <tr>
@@ -24,8 +25,8 @@
                     <td><?= htmlspecialchars($user['login']) ?></td>
                     <td><?= htmlspecialchars($user['userrole']) ?></td>
                     <td>
-                        <a href="edit_user.php?id=<?= htmlspecialchars($user['id']) ?>">Edit</a>
-                        <a href="delete_user.php?id=<?= htmlspecialchars($user['id']) ?>">Delete</a>
+                        <a href="edit.php?type=users&id=<?= htmlspecialchars($user['id']) ?>">Edit</a>
+                        <a href="#" onclick="confirmDelete('delete.php?type=users&id=<?= htmlspecialchars($user['id']) ?>')">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
