@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit</title>
+    <title>CRUD</title>
 </head>
 <body>
-    <?= $editHTMLContent; ?>
+    <?= $CRUD_HTML_Content; ?>
 </body>
 </html>

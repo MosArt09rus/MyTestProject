@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Categories</h1>
-    <a href="add.php?type=categories">Add Category</a>
+    <a href="CRUD.php?operation=add&type=categories">Add Category</a>
     <table>
         <thead>
             <tr>
@@ -23,8 +23,8 @@
                     <td><?= htmlspecialchars($category['id']) ?></td>
                     <td><?= htmlspecialchars($category['name']) ?></td>
                     <td>
-                        <a href="edit.php?type=categories&id=<?= htmlspecialchars($category['id']) ?>">Edit</a>
-                        <a href="#" onclick="confirmDelete('delete.php?type=categories&id=<?= htmlspecialchars($category['id']) ?>')">Delete</a>
+                        <a href="CRUD.php?operation=edit&type=categories&id=<?= htmlspecialchars($category['id']) ?>">Edit</a>
+                        <a href="#" onclick="confirmDelete('CRUD.php?operation=delete&type=categories&id=<?= htmlspecialchars($category['id']) ?>')">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

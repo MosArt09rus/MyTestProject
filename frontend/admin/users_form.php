@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Users</h1>
-    <a href="add.php?type=users">Add User</a>
+    <a href="CRUD.php?operation=add&type=users">Add User</a>
     <table>
         <thead>
             <tr>
@@ -25,8 +25,8 @@
                     <td><?= htmlspecialchars($user['login']) ?></td>
                     <td><?= htmlspecialchars($user['userrole']) ?></td>
                     <td>
-                        <a href="edit.php?type=users&id=<?= htmlspecialchars($user['id']) ?>">Edit</a>
-                        <a href="#" onclick="confirmDelete('delete.php?type=users&id=<?= htmlspecialchars($user['id']) ?>')">Delete</a>
+                        <a href="CRUD.php?operation=edit&type=users&id=<?= htmlspecialchars($user['id']) ?>">Edit</a>
+                        <a href="#" onclick="confirmDelete('CRUD.php?operation=delete&type=users&id=<?= htmlspecialchars($user['id']) ?>')">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

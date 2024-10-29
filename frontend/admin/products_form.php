@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Products</h1>
-    <a href="add.php?type=products">Add Product</a>
+    <a href="CRUD.php?operation=add&type=products">Add Product</a>
     <table>
         <thead>
             <tr>
@@ -29,8 +29,8 @@
                     <td><?= $product['description'] ?></td>
                     <td><?= $product['category_name'] ?></td>
                     <td>
-                        <a href="edit.php?type=products&id=<?= $product['id'] ?>">Edit</a>
-                        <a href="#" onclick="confirmDelete('delete.php?type=products&id=<?= $product['id'] ?>')">Delete</a>
+                        <a href="CRUD.php?operation=edit&type=products&id=<?= $product['id'] ?>">Edit</a>
+                        <a href="#" onclick="confirmDelete('CRUD.php?operation=delete&type=products&id=<?= $product['id'] ?>')">Delete</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
