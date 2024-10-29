@@ -236,12 +236,17 @@ private function renderEditUserForm($user) {
 
 //Удаление
 
-public function delete($type, $id) {
-    if ($type != "user") {
-        $stmt = $this->pdo->prepare("DELETE FROM ? WHERE id = ?");
-        $stmt->execute([$type, $id]);
-        header('Location: products.php');
-    }
+public function deleteProduct($id) {
+    $stmt = $this->pdo->prepare("DELETE FROM products WHERE id = ?");
+    $stmt->execute([$id]);
+    header('Location: products.php');
+    exit;
+}
+
+public function deleteCategory($id) {
+    $stmt = $this->pdo->prepare("DELETE FROM categories WHERE id = ?");
+    $stmt->execute([$id]);
+    header('Location: categories.php');
     exit;
 }
 

@@ -29,11 +29,12 @@ elseif ($operation == "edit") {
     }
 }
 elseif ($operation == "delete") {
-    if ($type == "users" && isset($_SESSION['admin_logged_in'])) {
+    if ($type == "products") {
+        $adminPanel->deleteProduct($id);
+    } elseif ($type == "categories") {
+        $adminPanel->deleteCategory($id);
+    } elseif ($type == "users" && isset($_SESSION['admin_logged_in'])) {
         $adminPanel->deleteUser($id);
-    }
-    else {
-        $adminPanel->delete($type, $id);
     }
 }
 else echo "неизвестная операция";
